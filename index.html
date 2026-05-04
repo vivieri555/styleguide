@@ -6,7 +6,7 @@
     <title>Vivis Styleguide</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
     <div id="container">
 <h1>Vivis Styleguide</h1>
 <h2>Välkommen till Vivis Styleguide</h2>
@@ -71,8 +71,18 @@
 </table>
 </div>
 <div class="alert">
-    <span class="closebtn" onclick="this.parentElement.style.display=`none`;">&times;
-    </span>Sparat ok! Stäng</div>
-</div>
+    <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
+    </span>Sparat OK!</div>
+<div class="negativeAlert">
+    <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
+    </span>Varning!<br> Stäng ruta</div>
+    <div id="loaderContainer">
+        <div id="loader" class="loader"></div>
+        <p id="loadingText">Sidan laddas... Håll ut!</p>
+    </div>
+    <div style="display:none;"id="isLoading" class="animate-bottom">
+    </div>
+    </div>
+    <script src="javascript.js"></script>
 </body>
 </html>

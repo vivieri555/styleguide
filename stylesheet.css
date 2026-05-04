@@ -52,7 +52,8 @@ background-color:rgb(170, 230, 200);
 padding: 5px;
 }
 #negativeBtn {
-    background-color:rgb(226, 75, 105);
+    background-color:rgb(160, 25, 16);
+    color: white;
     padding: 5px;
 }
 .nameTable {
@@ -85,4 +86,81 @@ th, td {
     color:white;
     margin-bottom: 15px;
     width: 25%;
+    border: 2px solid black;
+}
+.closeBtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid black;
+}
+.negativeAlert {
+    padding: 10px;
+    background-color:rgb(160, 25, 16);
+    color: white;
+    margin-bottom: 15px;
+    width: 25%;
+    border: 2px solid black;
+}
+#loaderContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#loader {
+    position: relative;
+    z-index: 1;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(59, 71, 128);
+    border-bottom: 16px solid rgb(59, 71, 128);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 0;
+}
+@-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#isLoading {
+    text-align: center;
+   display: none;
+}
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+}
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+#loadingText {
+    display: block;
+    text-align: center;
+    margin: 0;
+    font-size: 1.1em;
+    color: rgb(59, 71, 128);
+    background-color: white;
 }
