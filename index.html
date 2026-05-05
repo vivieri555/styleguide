@@ -10,6 +10,13 @@
 </head>
 <body onload="myFunction()" style="margin:0;">
     <div id="container">
+        <nav>
+            <a href="#divBtns">Knappar |</a>
+            <a href="#divsTable">Tabeller |</a>
+            <a href="#navigation">Navigation |</a>
+            <a href="#msgWarn">Meddelanden/Varningar |</a>
+            <a href="#loadHead">Laddningsindikator |</a>
+        </nav>
 <h1>Vivis Styleguide exempel på h1 rubrik</h1>
 <p>Kod för h1 rubrik i HTML &lt;h1&gt;Rubrik&lt;/h1&gt;<br>
 I CSS filen används<br> font-size: 3.25em;<br>
@@ -31,7 +38,8 @@ I CSS filen används font-size:2.25em;
 <p>All vanlig brödtext ska ha dessa inställningar i HTML. 
     Kod exempel för den flytande brödtexten:</p>
     <p id="regularText">body &lbrace; background-color:rgb(235, 206, 227);<br> 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+    <br>'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     <br>font-size:16px;<br> 
     margin-left: 5&#37;; &rbrace;
 </p>
@@ -41,14 +49,21 @@ I CSS filen används font-size:2.25em;
     <img src="StandardButton.png" alt="bild på kod för standardknapp">
     <p>Knapparna ser ut så här för standardknapp, Skriv ut knapp. 
         <br>Positiva gröna spara knappen, samt den röda negativa knappen.</p>
-<button id="standardBtn">Standardknapp</button>
-
+        <p>Det som skiljer mellan Standard- och Skriva ut knappen är att Skriva ut inte har en font-weight.</p>
+<p>Den gröna positiva knappen har samma inställningar som Standard men med en annan bakgrundsfärg:<br>
+background-color:rgb(170, 230, 200);</p>
+<p>Den negativa knappen har samma inställningar som standard men andra färger som:<br>
+ background-color:rgb(160, 25, 16);
+    color: white;</p>
+        <button id="standardBtn">Standardknapp</button>
 <button id="printBtn">Skriv ut</button>
 <button id="saveBtn">Spara, OK</button>
 <button id="negativeBtn">Avbryt, Stäng, ta bort</button>
 </div>
-<div class="divs">
-    <p>Exempel på längre tabeller:</p>
+<div id="divsTable">
+    <h3>Tabeller</h3>
+    <p>Exempel på “längre tabell” lista i CSS kod där tabellen ska få linjer 
+        bara horisontellt för att mjukare utseende med mindre linjer:</p>
 <table class="nameTable">
     <tr>
         <th>Förnamn</th>
@@ -63,9 +78,11 @@ I CSS filen används font-size:2.25em;
         <td>Fyrkant</td>
     </tr>
 </table>
+<p>Kodexempel för lång tabell:</p>
+<img src="TableLong.png" alt="bild på lång tabell">
 </div>
 <div class="divs">
-    <p>Exempel på längre tabeller:</p>
+    <p>Exempel på tabell med många kolumner nedan där vi använder varannan färgton</p>
 <table class="manyColumnsTable">
     <tr>
         <th>Namn</th>
@@ -96,18 +113,38 @@ I CSS filen används font-size:2.25em;
         <td>Data 15</td>
     </tr>
 </table>
+<p>Kodexempel i CSS:</p>
+<img src="ManyColumns.png" alt="bild på många kolumner">
 </div>
+<h3 id="navigation">Navigation</h3>
+<p>Kodexempel för navigation i Html:</p>
+<p>&lt;nav&gt;
+&lt;a href="#divBtns"&gt;Knappar |&lt;/a/&gt;
+&lt;/nav&gt;</p>
+<h3 id="msgWarn">Meddelanden/Varningar</h3>
 <div class="alert">
     <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
     </span>Sparat OK!</div>
 <div class="negativeAlert">
     <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
     </span>Varning!<br> Stäng ruta</div>
+    <h3 id="loadHead">Laddningsindikator</h3>
+    <p>Så här ser laddnings symbolen ut, men texten kan komma att ändras i framtiden</p>
+    <img id="loadImg" src="loadImg.png" alt="bild på laddningsindikator">
     <div id="loaderContainer">
         <div id="loader" class="loader"></div>
         <p id="loadingText">Sidan laddas... Håll ut!</p>
     </div>
     <div style="display:none;"id="isLoading" class="animate-bottom">
+    </div>
+
+    <button id="loadingBtn">Klicka här för kodexempel</button>
+    <img id="loadCode" src="loadCode.png" alt="Kodexempel">
+    <div id="panel">
+        <h3>Paneler</h3>
+    </div>
+    <div id="formsContainer">
+        <h3>Formulär</h3>
     </div>
     <div id="colorContainer">
          <p id="colorSchema">Färgschemat</p>
