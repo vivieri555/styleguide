@@ -193,3 +193,20 @@ th, td {
     max-width: 1200px;
     min-width: 800px;
 }
+#loadingBtn {
+max-width: 80vw;
+}
+.panelClass div {
+    border: 5px solid black;
+    float:left;
+    width: 33%;
+}
+#neutralPanel {
+    background-color:lightgray;
+}
+#positivePanel {
+    background-color:lightgreen;
+}
+#negativePanel {
+    background-color: rgb(240, 98, 98);
+}
