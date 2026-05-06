@@ -210,3 +210,30 @@ max-width: 80vw;
 #negativePanel {
     background-color: rgb(240, 98, 98);
 }
+.navClass {
+    background-color:lightgrey;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+    li {
+        float: left;
+        flex-direction: column;
+        border-right: 1px solid rgb(23, 23, 63);
+    }
+    li a {
+        display: block;
+        color: rgb(23, 23, 63);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: rgb(170, 166, 166);
+    }
+    li:last-child {
+        border-right: none;
+    }
+}
