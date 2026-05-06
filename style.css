@@ -1,6 +1,6 @@
 #container {
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -34,14 +34,15 @@ body {
 #regularText {
     background-color: black;
     color:aqua;
+    max-width: 50vw;
+    padding: 5px;
 }
 #divBtns {
     padding: 10 px;
     flex-direction: column;
-
 }
-#standardBtn {
-    border: solid 1px rgb(51, 18, 44);
+.standardBtn {
+    border: solid 1px rgb(23, 23, 63);
     border-radius: 5px;
     color:rgb(23, 23, 63);
     padding: 10px;
@@ -49,16 +50,16 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight:bold;
 }
-#printBtn {
-    border: solid 1px rgb(51, 18, 44);
+.printBtn {
+    border: solid 1px rgb(23, 23, 63);
     border-radius: 5px;
     color:rgb(23, 23, 63);
     padding: 10px;
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-#saveBtn {
-    border: solid 1px rgb(51, 18, 44);
+.saveBtn {
+    border: solid 1px rgb(23, 23, 63);
     border-radius: 5px;
     background-color:rgb(170, 230, 200);
     color: rgb(23, 23, 63);
@@ -67,14 +68,26 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-#negativeBtn {
-    border: solid 1px rgb(51, 18, 44);
+.negativeBtn {
+    border: solid 1px rgb(23, 23, 63);
     background-color:rgb(160, 25, 16);
     color: white;
     padding: 10px;
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
      font-weight: bold;
+}
+.saveBtn:active {
+    background-color: rgb(152, 207, 180);
+}
+.standardBtn:active {
+    background-color:antiquewhite;
+}
+.printBtn:active {
+    background-color:antiquewhite;
+}
+.negativeBtn:active {
+    background-color: rgb(138, 22, 14);
 }
 .nameTable {
     border-collapse: collapse;
@@ -98,18 +111,25 @@ th, td {
 }
 #divsTable {
     margin: 20 px;
-    padding: 15px;
+    padding: 30px;
+}
+#navigation {
+    padding: 50px;
+}
+#msgWarn {
+    padding: 30px;
 }
 .alert {
-    padding: 10px;
+    padding: 20px;
     background-color:rgb(59, 71, 128);
+    font-size: 15px;
     color:white;
     margin-bottom: 15px;
-    width: 8vw;
+    max-width: fit-content;
     border: 2px solid black;
 }
 .closeBtn {
-    margin-left: 10px;
+    margin-left: 15px;
     color: white;
     font-weight: bold;
     float: right;
@@ -124,8 +144,8 @@ th, td {
     background-color:rgb(160, 25, 16);
     color: white;
     margin-bottom: 15px;
-    width: 8vw;
     border: 2px solid black;
+    max-width: fit-content;
 }
 #loaderContainer {
     position: absolute;
@@ -138,7 +158,7 @@ th, td {
     gap: 20px;
 }
 #loader {
-    position: relative;
+    position: absolute;
     z-index: 1;
     border: 16px solid #f3f3f3;
     border-top: 16px solid rgb(59, 71, 128);
@@ -162,7 +182,7 @@ th, td {
    display: none;
 }
 .animate-bottom {
-    position: relative;
+    position: absolute;
     -webkit-animation-name: animatebottom;
     -webkit-animation-duration: 1s;
     animation-name: animatebottom;
@@ -205,10 +225,11 @@ max-width: 80vw;
     background-color:lightgray;
 }
 #positivePanel {
-    background-color:lightgreen;
+    background-color:rgb(152, 207, 180);
 }
 #negativePanel {
-    background-color: rgb(240, 98, 98);
+    background-color: rgb(160, 25, 16);
+    color: white;
 }
 .navClass {
     background-color:lightgrey;
@@ -217,7 +238,8 @@ max-width: 80vw;
     padding: 0;
     list-style-type: none;
     overflow: hidden;
-    float: right;
+    float: left;
+
     li {
         float: left;
         flex-direction: column;
@@ -236,4 +258,16 @@ max-width: 80vw;
     li:last-child {
         border-right: none;
     }
+}
+#formsContainer {
+    max-width: 400px;
+}
+.borderC {
+    margin: 20px;
+    border-bottom: 5px solid rgb(138, 132, 136);
+}
+#colorContainer {
+    font-size: 20px;
+    background-color: white;
+    max-width: 600px;
 }
