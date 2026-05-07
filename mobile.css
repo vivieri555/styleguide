@@ -1,0 +1,13 @@
+#container {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    border-bottom: rgb(138, 132, 136);
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 16px;
+}
