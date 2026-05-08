@@ -22,3 +22,20 @@ changeText.addEventListener('click', function() {
         this.textContent = 'Klicka här för kodexempel';
     }
 });
+/* Drop down menyn*/
+function myFunction2() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+/* toggla mellan att visa o ta bort menyn visuellt */
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
