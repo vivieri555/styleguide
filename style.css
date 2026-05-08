@@ -3,13 +3,11 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 90%;
-  
+    max-width: fit-content;
     align-items: center;
     border-bottom: rgb(211, 211, 211);
     text-align: center;
     justify-content: center;
-    margin-right: 10px;
     font-size: 16px;
 }
 h1 {
@@ -151,7 +149,7 @@ th, td {
     max-width: fit-content;
 }
 #loaderContainer {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -161,7 +159,7 @@ th, td {
     gap: 20px;
 }
 #loader {
-    position: absolute;
+    position: relative;
     z-index: 1;
     border: 16px solid #f3f3f3;
     border-top: 16px solid rgb(59, 71, 128);
@@ -214,7 +212,6 @@ th, td {
     display: none;
     margin-top: 20px;
     max-width: 100%;
-    height: auto;
 }
 #loadingBtn {
 max-width: 80vw;
@@ -242,6 +239,12 @@ max-width: 80vw;
     list-style-type: none;
     overflow: hidden;
     float: left;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
 
     li {
         float: left;
@@ -318,4 +321,42 @@ img {
     margin-right: auto;
     display: flex;
     flex-direction: column;
+}
+#navEx {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+     display: flex;
+   justify-content: center;
+    li {
+        list-style: none;
+        float: left;
+        flex-direction: column;
+        border-right: 1px solid rgb(23, 23, 63);
+    }
+    li a {
+        display: block;
+        color: rgb(23, 23, 63);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: rgb(170, 166, 166);
+    }
+    li:last-child {
+        border-right: none;
+    }
+}
+.navClass2 {
+    background-color:lightgrey;
+}
+#divsTable {
+border-right: 5px solid lightgray;
+}
+.centered {
+    justify-content: center;
+    display: flex;
 }

@@ -1,4 +1,4 @@
-/*Visa kod för laddningsindikatorn */
+/* laddningsindikator relaterat */
 var myVar;
 
 function myFunction() {

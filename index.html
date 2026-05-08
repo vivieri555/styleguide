@@ -13,6 +13,8 @@
     <div id="container">
         <nav class="navContainer">
             <ul class="navClass">
+                <li><a href="#headlines">Rubriker</a></li>
+                <li><a href="#fluentText">Flytande text</a></li>
                 <li><a href="#divBtns">Knappar</a></li>
                 <li><a href="#divsTable">Tabeller</a></li>
                 <li><a href="#navigation">Navigation</a></li>
@@ -23,7 +25,7 @@
                 <li><a href="#colorContainer">Färgschema</a></li>
             </ul>
     </nav>
-    <div class="borderC">
+    <div id="headlines" class="borderC">
 <h1>Vivis Styleguide exempel på h1 rubrik</h1>
 <p>Kod för h1 rubrik i HTML &lt;h1&gt;Rubrik&lt;/h1&gt;<br>
 I CSS filen används<br> font-size: 3.25em;<br>
@@ -42,7 +44,7 @@ I CSS filen används font-size:2.25em;
     <br>I CSS filen används font-size: 1.75em;</p>
     </div>
 
-<div class="borderC">
+<div id="fluentText" class="borderC">
 <h4>All flytande brödtext</h4>
 <p>All vanlig brödtext ska ha dessa inställningar i HTML. 
     Kod exempel för den flytande brödtexten:</p>
@@ -66,15 +68,17 @@ I CSS filen används font-size:2.25em;
 <p>Det som skiljer mellan Standard- och Skriva ut knappen är att Skriva ut inte har en font-weight.</p>
 <p>Den gröna positiva knappen har samma inställningar som Standard men med en annan bakgrundsfärg:<br>
 background-color:rgb(170, 230, 200);</p>
-<p>Den negativa knappen har samma inställningar som standard men andra färger som:<br>
+<p class="text">Den negativa knappen har samma inställningar som standard men andra färger som:<br>
  background-color:rgb(160, 25, 16);
-    color: white;</p>
+    color: white;<br>
+I HTML så kan man använda tagg &lt;button&gt; för att skapa knapp. Använd sedan addEventListener i JS för att koppla funktioner.
+För framtiden kan animering för att visa reaktion när användare klickar på knapp är okej eller använda mörkare nyans vid klick.</p>
 </div>
 <div id="tableContainer">
   <div id="divsTable">
     <h3>Tabeller</h3>
-    <p>Exempel på “längre tabell” lista i CSS kod där tabellen ska få linjer 
-        bara horisontellt för att mjukare utseende med mindre linjer:</p>
+    <p class="text">Exempel på “längre tabell” lista i CSS kod där tabellen ska få linjer 
+        bara horisontellt för att mjukare utseende med mindre linjer nedanför:</p>
 <table class="nameTable">
     <tr>
         <th>Förnamn</th>
@@ -89,8 +93,9 @@ background-color:rgb(170, 230, 200);</p>
         <td>Fyrkant</td>
     </tr>
 </table>
-<p>Kodexempel för lång tabell:</p>
+<p>Kodexempel för lång tabell i CSS:</p>
 <img src="TableLong.png" alt="bild på lång tabell">
+<p>Kod i Html görs med taggen &lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;/table&gt;</p>
 </div>
 
 <div class="divs">
@@ -127,7 +132,9 @@ background-color:rgb(170, 230, 200);</p>
 </table>
 <p>Kodexempel i CSS:</p>
 <img src="ManyColumns.png" alt="bild på många kolumner">
+<p>Kod i Html görs med taggen &lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;/table&gt;</p>
 </div>
+
   </div>
 
 <div class="borderC">
@@ -139,8 +146,9 @@ background-color:rgb(170, 230, 200);</p>
                 &lt;li&gt;&lt;a href="#divsTable"&gt;Tabeller&lt;/a&gt;&lt;/li&gt;
             <br>&lt;/ul&gt;<br>
     &lt;/nav&gt;<br></p>
-    <nav class="navContainer">
-            <ul class="navClass">
+    <!-- navContainer för att komma till menyn-->
+    <nav id="navEx">
+            <ul class="navClass2">
                 <li><a href="#navContainer">Menysidan</a></li>
                 <li><a href="#divsTable">Tabeller</a></li>
             </ul>
@@ -165,25 +173,25 @@ background-color:rgb(170, 230, 200);</p>
         color: rgb(23, 23, 63); 
         text-align: center; 
         padding: 14px 16px; 
-        text-decoration: none; 
-    &#125; 
+        text-decoration: none; &#125; 
     li a:hover &#123; 
         background-color: rgb(170, 166, 166); &#125; 
     li:last-child &#123; 
         border-right: none; 
     &#125; &#125; </p></div>
-   
 </div>
 
-<div class="borderC">
+<div id="msgWarn" class="borderC">
 <h3>Meddelanden/Varningar</h3>
 <p>Exempel på hur meddelanden och varningar till användaren ska se ut</p>
+<div class="centered">
 <div class="alert">
     <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
     </span>Sparat OK!</div>
 <div class="negativeAlert">
     <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
     </span>Varning!<br> Stäng ruta</div>
+</div>
     <p class="text">Viktigt att skriva med en text till användaren i dessa meddelanden och varningar.
         För information så kan man använda blå ruta med passande text. För en varningsruta så får man ha röd ruta
         med en passande text för det syftet. Sen kan användaren klicka på X för att stänga ned rutan.
@@ -228,18 +236,13 @@ background-color:rgb(170, 230, 200);</p>
 
   <div class="borderC">
 <h3 id="loadHead">Laddningsindikator</h3>
-    <p>Så här ser laddnings symbolen ut, men texten kan komma att ändras i framtiden</p>
+    <p>Så här ser laddnings symbolen ut, men texten ska i framtiden ändras till bara Laddar...
+       <br>I body tagg lägg till: &lt;body onload="myFunction()" style="margin:0;"&gt;
+    </p>
     <img id="loadImg" src="loadImg.png" alt="bild på laddningsindikator">
  <button id="loadingBtn">Klicka här för kodexempel till laddningsindikatorn</button>
     <img id="loadCode" src="loadCode.png" alt="Kodexempel">
   </div>
-
-    <div id="loaderContainer">
-        <div id="loader" class="loader"></div>
-        <p id="loadingText">Sidan laddas... Håll ut!</p>
-    </div>
-    <div style="display:none;"id="isLoading" class="animate-bottom">
-    </div>
    
     <div id="panel" class="borderC">
         <h3>Paneler</h3>
@@ -267,7 +270,7 @@ background-color:rgb(170, 230, 200);</p>
     <div id="formsContainer" class="borderC">
         <h3>Formulär</h3>
         <form>
-            <p>Här kan man se exempel på hur man stylar ett formulär. Man kan använda en label 
+            <p class="text">Här kan man se exempel på hur man stylar ett formulär. Man kan använda en label 
                 för texten över formuläret i samma stil som flytande text. Fälten kan man ha 
                 vita och neutrala, enkelt och tydligt för användaren. Knapparna ska vara
             enligt standard knappen och följa mönstret för positiva knappen för att spara.
@@ -277,10 +280,10 @@ background-color:rgb(170, 230, 200);</p>
             <input type="text" id="firstName" name="firstName" placeholder="Förnamn"><br>
             <input class="saveBtn" id="formSaveBtn" type="submit" value="Spara">
             <button class="negativeBtn">Avbryt</button>
-            <p>Det är bra att ha placeholder information i en input ruta så användaren 
+            <p class="text">Det är bra att ha placeholder information i en input ruta så användaren 
                 tydligt ser vad som ska matas in som "förnamn". Blir det fel inmatning 
                 så kan man ha placeholdertext för att meddela användaren exempelvis "Fel, bara siffror" eller liknande.
-            <br>Kodexempel:<br>&lt;form&gt;&lt;label for="firstName"&gt;Förnamn:&lt;/label&gt;&lt;br&gt;
+            <br>Kodexempel html:</p><p class="codeExample"><br>&lt;form&gt;&lt;label for="firstName"&gt;Förnamn:&lt;/label&gt;&lt;br&gt;
         <br>&lt;input type="text" id="firstName" name="firstName" placeholder="Förnamn"&gt;&lt;br&gt;<br>
     &lt;input class="saveBtn" id="formSaveBtn" type="submit" value="Spara"&gt;
 &lt;input class="saveBtn" id="formSaveBtn" type="submit" value="Spara"&gt;
@@ -304,7 +307,12 @@ Röda färgen till de negativa knapparna och paneler rgb(160, 25, 16);</p>
     Ljusgrå färg till panel och navigationsmeny: rgb(211, 211, 211);</p>
     <p><i id="blueAlert" class="bi bi-balloon-fill"></i>Blå alert-knappen och laddningsindikatorns färg: rgb(59, 71, 128);</p>
     </div>
-   
+    </div>
+    <div id="loaderContainer">
+        <div id="loader" class="loader"></div>
+        <p id="loadingText">Sidan laddas... Håll ut!</p>
+    </div>
+    <div style="display:none;"id="isLoading" class="animate-bottom">
     </div>
     <script src="javascript.js"></script>
 </body>
