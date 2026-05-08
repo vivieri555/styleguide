@@ -11,7 +11,7 @@
 </head>
 <body onload="myFunction()" style="margin:0;">
     <div id="container">
-        <nav id="navContainer">
+        <nav class="navContainer">
             <ul class="navClass">
                 <li><a href="#divBtns">Knappar</a></li>
                 <li><a href="#divsTable">Tabeller</a></li>
@@ -46,7 +46,7 @@ I CSS filen används font-size:2.25em;
 <h4>All flytande brödtext</h4>
 <p>All vanlig brödtext ska ha dessa inställningar i HTML. 
     Kod exempel för den flytande brödtexten:</p>
-    <p id="regularText">body &lbrace; background-color:rgb(235, 206, 227);<br> 
+    <p class="codeExample">body &lbrace; background-color:rgb(235, 206, 227);<br> 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 
     <br>'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     <br>font-size:16px;<br> 
@@ -133,13 +133,50 @@ background-color:rgb(170, 230, 200);</p>
 <div class="borderC">
 <h3 id="navigation">Navigation</h3>
 <p>Kodexempel för navigation i Html:</p>
-<p>&lt;nav&gt;
-&lt;a href="#divBtns"&gt;Knappar |&lt;/a/&gt;
-&lt;/nav&gt;</p>
+<p class="codeExample">&lt;nav id="navContainer"&gt;<br>
+            &lt;ul class="navClass"&gt;<br>
+                &lt;li&gt;&lt;a href="#divBtns"&gt;Knappar&lt;/a&gt;&lt;/li&gt;<br>
+                &lt;li&gt;&lt;a href="#divsTable"&gt;Tabeller&lt;/a&gt;&lt;/li&gt;
+            <br>&lt;/ul&gt;<br>
+    &lt;/nav&gt;<br></p>
+    <nav class="navContainer">
+            <ul class="navClass">
+                <li><a href="#navContainer">Menysidan</a></li>
+                <li><a href="#divsTable">Tabeller</a></li>
+            </ul>
+    </nav>
+    <div class="text"> <p>Kan då se ut så här. För mobila enheter så ska vi i framtiden ändra till dropdown meny, då det 
+        tar mindre plats än en vanlig meny, samt ändra färgskala till en blåare färg som rgb(71, 71, 134); 
+        Den är okej att byta till. Kod till CSS:</p>
+        <p class="codeExample"> 
+.navClass &#123; 
+    background-color:lightgrey; 
+    text-decoration: none; 
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; overflow: hidden; float: left; 
+    li &#123; 
+        float: left; 
+        flex-direction: column; 
+        border-right: 1px solid rgb(23, 23, 63); 
+    &#125; 
+    li a &#123; 
+        display: block; 
+        color: rgb(23, 23, 63); 
+        text-align: center; 
+        padding: 14px 16px; 
+        text-decoration: none; 
+    &#125; 
+    li a:hover &#123; 
+        background-color: rgb(170, 166, 166); &#125; 
+    li:last-child &#123; 
+        border-right: none; 
+    &#125; &#125; </p></div>
+   
 </div>
 
 <div class="borderC">
-<h3 id="msgWarn">Meddelanden/Varningar</h3>
+<h3>Meddelanden/Varningar</h3>
 <p>Exempel på hur meddelanden och varningar till användaren ska se ut</p>
 <div class="alert">
     <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
@@ -147,6 +184,46 @@ background-color:rgb(170, 230, 200);</p>
 <div class="negativeAlert">
     <span class="closeBtn" onclick="this.parentElement.style.display=`none`;">&times;
     </span>Varning!<br> Stäng ruta</div>
+    <p class="text">Viktigt att skriva med en text till användaren i dessa meddelanden och varningar.
+        För information så kan man använda blå ruta med passande text. För en varningsruta så får man ha röd ruta
+        med en passande text för det syftet. Sen kan användaren klicka på X för att stänga ned rutan.
+        Kod för detta blir i HTML:</p>
+        <p class="codeExample">
+<br> &lt;div class="alert"&gt;<br>
+    &lt;span class="closeBtn" onclick="this.parentElement.style.display=`none`;"&gt;&times;
+    &lt;/span&gt;Sparat OK!<br>&lt;/div&gt;
+<br>&lt;div class="negativeAlert"&gt;<br>
+    &lt;span class="closeBtn" onclick="this.parentElement.style.display=`none`;"&gt;&times;
+    <br>&lt;/span&gt;Varning!&lt;br&gt; Stäng ruta&lt;/div&gt;
+    </p><p>Kodexempel i CSS:</p>
+    <p class="codeExample">
+.alert &#123; 
+    padding: 20px; 
+    background-color:rgb(59, 71, 128); 
+    font-size: 15px; 
+    color:white; 
+    margin-bottom: 15px; 
+    max-width: fit-content; 
+    border: 2px solid black; 
+&#125; 
+.closeBtn &#123; 
+    margin-left: 15px; 
+    color: white; 
+    font-weight: bold; 
+    float: right; 
+    font-size: 22px; 
+    line-height: 20px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    border: 1px solid black; 
+&#125; 
+.negativeAlert &#123; 
+    padding: 10px; 
+    background-color:rgb(160, 25, 16); 
+    color: white; 
+    margin-bottom: 15px; 
+    border: 2px solid black; 
+    max-width: fit-content; &#125;</p>
 </div>
 
   <div class="borderC">
@@ -166,13 +243,25 @@ background-color:rgb(170, 230, 200);</p>
    
     <div id="panel" class="borderC">
         <h3>Paneler</h3>
-        <p>Finns 3 olika varianter på paneler. Den första neutrala har en ljusgrå bakgrund.
-            Det passar bra till en kalender eller anslagstavla.
+        <p class="text">Finns 3 olika varianter på paneler. Den första neutrala har en ljusgrå bakgrund.
+            Det passar bra till en kalender eller anslagstavla. Bredden och höjd på panel 
+            beror på innehållet och måste anpassas därefter.
         </p><div class="panelClass">
             <div id="neutralPanel">Den neutrala panelen med sin ljusgråa bakgrundsfärg</div>
         <div id="positivePanel">Den positiva panelen med sin ljusgröna bakgrundsfärg</div>
         <div id="negativePanel">Den negativa panelen med sin röda bakgrundsfärg</div>
-        </div>
+    <p class="text">Kod för att bygga upp en panel görs med hjälp av div-tagg i HTML &lt;div&gt; 
+        <br>Kod i CSS:<p class="codeExample"><br>.panelClass div &#123; 
+    <br>border: 5px solid black; float:left; width: 33%; 
+&#125; 
+<br>#neutralPanel &#123; <br>
+    background-color:lightgray; &#125; <br>
+#positivePanel &#123; background-color:rgb(152, 207, 180); 
+&#125;<br> #negativePanel &#123; 
+    background-color: rgb(160, 25, 16); 
+    color: white; &#125;</p>
+</div></p>    
+    </div>
         
     </div>
     <div id="formsContainer" class="borderC">
@@ -189,27 +278,31 @@ background-color:rgb(170, 230, 200);</p>
             <input class="saveBtn" id="formSaveBtn" type="submit" value="Spara">
             <button class="negativeBtn">Avbryt</button>
             <p>Det är bra att ha placeholder information i en input ruta så användaren 
-                tydligt ser vad som ska matas in som "förnamn".
-            </p>
+                tydligt ser vad som ska matas in som "förnamn". Blir det fel inmatning 
+                så kan man ha placeholdertext för att meddela användaren exempelvis "Fel, bara siffror" eller liknande.
+            <br>Kodexempel:<br>&lt;form&gt;&lt;label for="firstName"&gt;Förnamn:&lt;/label&gt;&lt;br&gt;
+        <br>&lt;input type="text" id="firstName" name="firstName" placeholder="Förnamn"&gt;&lt;br&gt;<br>
+    &lt;input class="saveBtn" id="formSaveBtn" type="submit" value="Spara"&gt;
+&lt;input class="saveBtn" id="formSaveBtn" type="submit" value="Spara"&gt;
+<br>&lt;button class="negativeBtn"&gt;Avbryt&lt;/button&gt;</p>
         </form>
     </div>
-    <div id="colorContainer">
+    <div id="colorContainer" class="borderC">
          <h3 id="colorSchema">Färgschemat</h3>
          <p>Se färg på ballongen bredvid. Färgerna kan komma att ändras till ljusgrå bakgrund som färgen: rgb(201, 211, 206)</p>
-        <p><i class="bi bi-balloon-fill" style="color:rgb(235, 206, 227)"></i> 
+        <p><i id="backgroundPink" class="bi bi-balloon-fill"></i> 
             Bakgrundsfärgen: rgb(235, 206, 227);</p>
-        <p><i class="bi bi-balloon-fill" style="color:rgb(152, 207, 180);"></i>
+        <p><i id="lightGreen" class="bi bi-balloon-fill"></i>
         Ljusgrön färg till positiva knappar och panel: rgb(152, 207, 180);</p>
     
-        <p><i class="bi bi-balloon-fill" style="color:rgb(23, 23, 63);"></i> 
+        <p><i id="darkBlue" class="bi bi-balloon-fill"></i> 
     Mörkblå färg till fonten för vanlig text rgb(23, 23, 63);
 samt till border och font färg till knappar</p>
-<p><i class="bi bi-balloon-fill" style="color:rgb(160, 25, 16)"></i>
+<p><i id="redColor" class="bi bi-balloon-fill"></i>
 Röda färgen till de negativa knapparna och paneler rgb(160, 25, 16);</p>
-<p><i class="bi bi-balloon-fill" style="color:lightgray;"></i>
+<p><i id="lightGray" class="bi bi-balloon-fill"></i>
     Ljusgrå färg till panel och navigationsmeny: rgb(211, 211, 211);</p>
-    <p><i class="bi bi-balloon-fill" style="color:rgb(59, 71, 128)"></i>Blå alert knappens färg: rgb(59, 71, 128);</p>
-    
+    <p><i id="blueAlert" class="bi bi-balloon-fill"></i>Blå alert-knappen och laddningsindikatorns färg: rgb(59, 71, 128);</p>
     </div>
    
     </div>

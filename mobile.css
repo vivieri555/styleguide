@@ -3,7 +3,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     border-bottom: rgb(138, 132, 136);
     text-align: center;
