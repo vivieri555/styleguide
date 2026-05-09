@@ -190,17 +190,16 @@ För framtiden kan animering för att visa reaktion när användare klickar på 
   </div>
 </div>
 <p>Kodexempel html:</p>
-<p class="codeExample">&lt;div class="dropdownMenu"&gt; 
+<pre><code class="codePre">&lt;div class="dropdownMenu"&gt; 
   &lt;button onclick="myFunction2()" class="dropbtn"&gt;Meny&lt;/button&gt; 
   &lt;div id="myDropdown" class="dropdown-content"&gt; 
     &lt;a href="#headlines"&gt;Rubriker&lt;/a&gt; 
     &lt;a href="#fluentText"%gt;BrödText&lt;/a&gt; 
     &lt;a href="#divBtns"&gt;Knappar&lt;/a&gt; 
   &lt;/div&gt; 
-&lt;/div&gt; </p>
+&lt;/div&gt;</code></pre>
 <p>CSS för undermenyer:</p>
-<p class="codeExample"> 
-.dropbtn &#123; background-color: lightgray; color: rgb(23, 23, 63); 
+<pre><code class="codePre">.dropbtn &#123; background-color: lightgray; color: rgb(23, 23, 63); 
   padding: 16px; 
   font-size: 16px; 
   border: none; 
@@ -226,9 +225,9 @@ För framtiden kan animering för att visa reaktion när användare klickar på 
   text-decoration: none; 
   display: block; &#125; 
 .dropdown a:hover &#123;background-color: #ddd;&#125; 
-.show &#123;display: block;&#125; </p>
+.show &#123;display: block;&#125; </code></pre>
 <p>Javascript för att kunna klicka och toggla att öppna och stänga menyn när man trycker på meny</p>
-<p class="codeExample">function myFunction2() &#123;
+<pre><code class="codePre">function myFunction2() &#123;
   document.getElementById("myDropdown").classList.toggle("show");
 &#125;
 /* toggla mellan att visa o ta bort menyn visuellt */
@@ -240,8 +239,10 @@ window.onclick = function(event) &#123;
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) &#123;
         openDropdown.classList.remove('show');
-      &#125; &#125; &#125; &#125;
-</p>
+        &#125; 
+       &#125; 
+      &#125; 
+    &#125;</code></pre>
 </div>
 
 <div id="msgWarn" class="borderC">
@@ -267,8 +268,7 @@ window.onclick = function(event) &#123;
     &lt;span class="closeBtn" onclick="this.parentElement.style.display=`none`;"&gt;&times;
     <br>&lt;/span&gt;Varning!&lt;br&gt; Stäng ruta&lt;/div&gt;
     </p><p>Kodexempel i CSS:</p>
-    <p class="codeExample">
-.alert &#123; 
+    <pre><code class="codePre">.alert &#123; 
     padding: 20px; 
     background-color:rgb(59, 71, 128); 
     font-size: 15px; 
@@ -294,7 +294,7 @@ window.onclick = function(event) &#123;
     color: white; 
     margin-bottom: 15px; 
     border: 2px solid black; 
-    max-width: fit-content; &#125;</p>
+    max-width: fit-content; &#125;</code></pre>
 </div>
 
   <div class="borderC">

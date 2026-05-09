@@ -406,3 +406,7 @@ background-color: lightgray;
 max-width: 45%;
 padding: 30px;
 }
+.codePre {
+    background-color: black;
+    color: aqua;
+}
