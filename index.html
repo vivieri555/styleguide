@@ -13,20 +13,21 @@
     <div id="container">
         <nav class="navContainer">
             <ul class="navClass">
-                <li><a href="#headlines">Rubriker</a></li>
-                <li><a href="#fluentText">Flytande text</a></li>
-                <li><a href="#divBtns">Knappar</a></li>
-                <li><a href="#divsTable">Tabeller</a></li>
-                <li><a href="#navigation">Navigation</a></li>
-                <li><a href="#msgWarn">Meddelanden/Varningar</a></li>
-                <li><a href="#loadHead">Laddningsindikator</a></li>
-                <li><a href="#panel">Paneler</a></li>
-                <li><a href="#formsContainer">Formulär</a></li>
-                <li><a href="#colorContainer">Färgschema</a></li>
+                <li><a href="#headlines" id="headlinesLink">Rubriker</a></li>
+                <li><a href="#fluentText" id="fluentTextLink">Flytande text</a></li>
+                <li><a href="#divBtns" id="divBtnsLink">Knappar</a></li>
+                <li><a href="#tableContainer" id="tableContainerLink">Tabeller</a></li>
+                <li><a href="#navigation" id="navigationLink">Navigation</a></li>
+                <li><a href="#msgWarn" id="msgWarnLink">Meddelanden/Varningar</a></li>
+                <li><a href="#loadHead" id="loadHeadLink">Laddningsindikator</a></li>
+                <li><a href="#panel" id="panelLink">Paneler</a></li>
+                <li><a href="#formsContainer" id="formsContainerLink">Formulär</a></li>
+                <li><a href="#colorContainer" id="colorContainerLink">Färgschema</a></li>
             </ul>
     </nav>
-    <div id="headlines" class="borderC">
-<h1>Vivis Styleguide exempel på h1 rubrik</h1>
+    <div id="headlines" class="borderC hidden">
+        <h1>Rubriker i Vivis styleguide</h1>
+<h1>Exempel på h1 rubrik</h1>
 <p>Kod för h1 rubrik i HTML &lt;h1&gt;Rubrik&lt;/h1&gt;<br>
 I CSS filen används<br> font-size: 3.25em;<br>
 Alla rubriker använder 
@@ -44,18 +45,17 @@ I CSS filen används font-size:2.25em;
     <br>I CSS filen används font-size: 1.75em;</p>
     </div>
 
-<div id="fluentText" class="borderC">
-<h4>All flytande brödtext</h4>
+<div id="fluentText" class="borderC hidden">
+<h2>All flytande brödtext</h2>
 <p>All vanlig brödtext ska ha dessa inställningar i HTML. 
     Kod exempel för den flytande brödtexten:</p>
-    <p class="codeExample">body &lbrace; background-color:rgb(235, 206, 227);<br> 
+    <p class="codeExample">body &lbrace; background-color:rgb(246, 239, 244);<br> 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 
     <br>'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-    <br>font-size:16px;<br> 
-    margin-left: 5&#37;; &rbrace;</p>
+    <br>font-size:16px; &rbrace;</p>
     </div>
 
-<div id="divBtns" class="borderC">
+<div id="divBtns" class="borderC hidden">
 <h4>Knappar</h4>
   <p>Standardknappar ska ha följande utseende med kodexempel:</p>
 <img src="StandardButton.png" alt="bild på kod för standardknapp">
@@ -137,23 +137,24 @@ För framtiden kan animering för att visa reaktion när användare klickar på 
 
   </div>
 
-<div class="borderC">
-<h3 id="navigation">Navigation</h3>
+<div id="navigation" class="borderC hidden">
+<h3>Navigation</h3>
 <p>Kodexempel för navigation i Html:</p>
-<p class="codeExample">&lt;nav id="navContainer"&gt;<br>
-            &lt;ul class="navClass"&gt;<br>
-                &lt;li&gt;&lt;a href="#divBtns"&gt;Knappar&lt;/a&gt;&lt;/li&gt;<br>
+<pre><code class="codePre">&lt;nav id="navContainer"&gt;
+            &lt;ul class="navClass"&gt;
+                &lt;li&gt;&lt;a href="#divBtns"&gt;Knappar&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="#divsTable"&gt;Tabeller&lt;/a&gt;&lt;/li&gt;
-            <br>&lt;/ul&gt;<br>
-    &lt;/nav&gt;<br></p>
+            &lt;/ul&gt;
+    &lt;/nav&gt;<br></code></pre>
     <!-- navContainer för att komma till menyn-->
+     <p>Kan då se ut så här:</p>
     <nav id="navEx">
             <ul class="navClass2">
                 <li><a href="#navContainer">Menysidan</a></li>
-                <li><a href="#divsTable">Tabeller</a></li>
+                <li><a href="#tableContainer">Tabeller</a></li>
             </ul>
     </nav>
-    <div class="text"> <p>Kan då se ut så här. För mobila enheter så ska vi i framtiden ändra till dropdown meny, då det 
+    <div class="text"> <p>För mobila enheter så ska vi i framtiden ändra till dropdown meny, då det 
         tar mindre plats än en vanlig meny, samt ändra färgskala till en blåare färg som rgb(71, 71, 134); 
         med vit text #fffff; för kontrast. 
         Den är okej att byta till. Kod till CSS:</p>
@@ -245,7 +246,7 @@ window.onclick = function(event) &#123;
     &#125;</code></pre>
 </div>
 
-<div id="msgWarn" class="borderC">
+<div id="msgWarn" class="borderC hidden">
 <h3>Meddelanden/Varningar</h3>
 <p>Exempel på hur meddelanden och varningar till användaren ska se ut</p>
 <div class="centered">
@@ -257,7 +258,7 @@ window.onclick = function(event) &#123;
     </span>Varning!<br> Stäng ruta</div>
 </div>
     <p class="text">Viktigt att skriva med en text till användaren i dessa meddelanden och varningar.
-        För information så kan man använda blå ruta med passande text. För en varningsruta så får man ha röd ruta
+        För information så kan man använda vit ruta med passande text. För framtiden kommer vi ha blå ruta. För en varningsruta så får man ha röd ruta
         med en passande text för det syftet. Sen kan användaren klicka på X för att stänga ned rutan.
         Kod för detta blir i HTML:</p>
         <p class="codeExample">
@@ -267,10 +268,12 @@ window.onclick = function(event) &#123;
 <br>&lt;div class="negativeAlert"&gt;<br>
     &lt;span class="closeBtn" onclick="this.parentElement.style.display=`none`;"&gt;&times;
     <br>&lt;/span&gt;Varning!&lt;br&gt; Stäng ruta&lt;/div&gt;
-    </p><p>Kodexempel i CSS:</p>
+    </p>
+    <p>exempel på en vit alert knapp med information: <img src="alertVit.png" alt="bild på vit alert"></p>
+    <p>Kodexempel i CSS för framtida blå alert knapp:</p>
     <pre><code class="codePre">.alert &#123; 
     padding: 20px; 
-    background-color:rgb(59, 71, 128); 
+    background-color: rgb(59, 71, 128); 
     font-size: 15px; 
     color:white; 
     margin-bottom: 15px; 
@@ -297,8 +300,8 @@ window.onclick = function(event) &#123;
     max-width: fit-content; &#125;</code></pre>
 </div>
 
-  <div class="borderC">
-<h3 id="loadHead">Laddningsindikator</h3>
+  <div id="loadHead" class="borderC hidden">
+<h3>Laddningsindikator</h3>
     <p>Så här ser laddnings symbolen ut, men texten ska i framtiden ändras till bara Laddar...
        <br>I body tagg lägg till: &lt;body onload="myFunction()" style="margin:0;"&gt;
     </p>
@@ -307,7 +310,7 @@ window.onclick = function(event) &#123;
     <img id="loadCode" src="loadCode.png" alt="Kodexempel">
   </div>
    
-    <div id="panel" class="borderC">
+    <div id="panel" class="borderC hidden">
         <h3>Paneler</h3>
         <p class="text">Finns 3 olika varianter på paneler. Den första neutrala har en ljusgrå bakgrund.
             Det passar bra till en kalender eller anslagstavla. Bredden och höjd på panel 
@@ -330,7 +333,7 @@ window.onclick = function(event) &#123;
     </div>
         
     </div>
-    <div id="formsContainer" class="borderC">
+    <div id="formsContainer" class="borderC hidden">
         <h3>Formulär</h3>
         <form>
             <p class="text">Här kan man se exempel på hur man stylar ett formulär. Man kan använda en label 
@@ -369,11 +372,11 @@ window.onclick = function(event) &#123;
 &lt;/form> </p> 
 </div> 
     </div>
-    <div id="colorContainer" class="borderC">
+    <div id="colorContainer" class="borderC hidden">
          <h3 id="colorSchema">Färgschemat</h3>
          <p>Se färg på ballongen bredvid. Färgerna kan komma att ändras till ljusgrå bakgrund som färgen: rgb(201, 211, 206)</p>
         <p><i id="backgroundPink" class="bi bi-balloon-fill"></i> 
-            Bakgrundsfärgen: rgb(235, 206, 227);</p>
+            Bakgrundsfärgen: rgb(246, 239, 244);</p>
         <p><i id="lightGreen" class="bi bi-balloon-fill"></i>
         Ljusgrön färg till positiva knappar och panel: rgb(152, 207, 180);</p>
     
