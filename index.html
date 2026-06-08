@@ -335,17 +335,17 @@ window.onclick = function(event) &#123;
     </div>
     <div id="formsContainer" class="borderC hidden">
         <h3>Formulär</h3>
-        <form>
             <p class="text">Här kan man se exempel på hur man stylar ett formulär. Man kan använda en label 
                 för texten över formuläret i samma stil som flytande text. Fälten kan man ha 
                 vita och neutrala, enkelt och tydligt för användaren. Knapparna ska vara
             enligt standard knappen och följa mönstret för positiva knappen för att spara.
         Den standard negativa knappen för att avbryta/rensa formulär. 
         Se avsnittet om <a href="#divBtns">knappar</a></p>
+        <form id="styleForm">
             <label for="firstName">Förnamn:</label><br>
             <input type="text" id="firstName" name="firstName" placeholder="Förnamn"><br>
             <input class="saveBtn" id="formSaveBtn" type="submit" value="Spara">
-            <button class="negativeBtn">Avbryt</button>
+            <button class="negativeBtn">Avbryt</button></form>
             <p class="text">Det är bra att ha placeholder information i en input ruta så användaren 
                 tydligt ser vad som ska matas in som "förnamn". Blir det fel inmatning 
                 så kan man ha placeholdertext för att meddela användaren exempelvis "Fel, bara siffror" eller liknande.
@@ -354,7 +354,6 @@ window.onclick = function(event) &#123;
     &lt;input class="saveBtn" id="formSaveBtn" type="submit" value="Spara"&gt;
 &lt;input class="saveBtn" id="formSaveBtn" type="submit" value="Spara"&gt;
 <br>&lt;button class="negativeBtn"&gt;Avbryt&lt;/button&gt;</p>
-        </form>
         <p>Checkbox för att kunna välja fler alternativ:</p>
         <div id="checkboxInfo"> 
 <form id="checkboxForm"> 
